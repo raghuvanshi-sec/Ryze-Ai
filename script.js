@@ -97,10 +97,7 @@
     const target = document.querySelector(href);
     if (target) {
       event.preventDefault();
-      const section = href === "#how-it-works"
-        ? document.querySelector("#capabilities")
-        : target;
-      if (section) section.scrollIntoView({
+      target.scrollIntoView({
         behavior: reduceMotion ? "auto" : "smooth",
         block: "start"
       });
